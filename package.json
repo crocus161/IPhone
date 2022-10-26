@@ -1,0 +1,24 @@
+{
+  "name": "iphone",
+  "version": "0.0.1",
+  "description": "Fully native javascript IPhone with usage of OOP paradigms and solid",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html -p 3000 --open",
+    "build": "parcel build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willcode228/IPhone.git"
+  },
+  "author": "Ilchenko Danil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/willcode228/IPhone/issues"
+  },
+  "homepage": "https://github.com/willcode228/IPhone#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
