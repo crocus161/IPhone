@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/willcode228/IPhone#readme",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0"
   }
 }

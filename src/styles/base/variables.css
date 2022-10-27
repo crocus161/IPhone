@@ -1,0 +1,15 @@
+/*:root {*/
+/*	--root-background: #0D0D0D;*/
+/*}*/
+
+@media(prefers-color-scheme: dark){
+	:root {
+		--root-background: #0D0D0D;
+	}
+}
+
+@media(prefers-color-scheme: light){
+	:root {
+		--root-background: #f9f9f9;
+	}
+}

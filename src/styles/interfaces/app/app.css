@@ -1,0 +1,79 @@
+
+
+.phone  {
+	position: relative;
+	width: 440px;
+	height: 894px;
+	z-index: 1;
+}
+
+.phone__screen {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	display: block;
+	width: 395px;
+	height: 849px;
+	border-radius: 40px;
+	background: red;
+}
+
+.phone__icon {
+	position: relative;
+}
+
+.phone__icon svg{
+	width: 100%;
+	height: 100%;
+}
+
+/* buttons */
+.phone__volume,
+.phone__power,
+.phone__silent {
+	cursor: pointer;
+	position: absolute;
+	z-index: -2;
+}
+
+.phone__button {
+	display: block;
+	width: 3px;
+	height: 100%;
+	border-radius: 0 3px 3px 0;
+	background: linear-gradient(90deg, #DED7D6, #F3F0F0);
+}
+
+
+/* volume buttons */
+.phone__volume {
+	right: 439px;
+	padding-left: 40px;
+	height: 67px;
+}
+
+.phone__volume .phone__button {
+	transform: rotate(-180deg);
+}
+
+.phone__volume-up {
+	top: 205px;
+}
+
+.phone__volume-down {
+	top: 288px
+}
+
+
+/* power button */
+.phone__power {
+	padding-right: 40px;
+	height: 106px;
+	top: 229px;
+	left: 439px;
+}
+
+
+
