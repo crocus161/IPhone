@@ -1,6 +1,12 @@
-/*:root {*/
-/*	--root-background: #0D0D0D;*/
-/*}*/
+
+
+:root {
+	--color-black: #000;
+	--color-white: #fff;
+
+
+	--open-screen-transition: .5s opacity;
+}
 
 @media(prefers-color-scheme: dark){
 	:root {

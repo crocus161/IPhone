@@ -1,10 +1,10 @@
-import { phoneIcon } from '../icons/phone';
+import { phoneIcon } from './icons/phone';
 
-export const phone = () => {
+export const app = () => {
 	return (`
 		<div class="phone">
 			<div class="phone__icon">${phoneIcon()}</div>
-			<div class="phone__screen"></div>
+			<div id="screen" class="phone__screen"></div>
 			
 			<button class="phone__power">
 				<span class="phone__button"></span>

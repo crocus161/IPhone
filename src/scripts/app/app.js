@@ -1,5 +1,6 @@
-import {phone} from './templates/template';
+import { app } from './template';
 import { getElement } from '../utils/getElement';
+import PowerOnScreen from '../modules/PowerOnScreen';
 
 class App {
 	constructor(startElementSelector) {
@@ -10,10 +11,12 @@ class App {
 
 	init() {
 		this.root.insertAdjacentHTML('afterbegin', this.template);
+
+		new PowerOnScreen();
 	}
 
 	get template() {
-		return phone();
+		return app();
 	}
 }
 

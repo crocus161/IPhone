@@ -4,6 +4,8 @@
 @import url('./base/base.css');
 
 /* ! INTERFACES, MODULES */
-@import url('./interfaces/app/app.css');
+@import url('./interfaces/app/index.css');
+@import url('interfaces/modules/common/screen/index.css');
+@import url('interfaces/modules/powerOnScreen/index.css');
 
 
