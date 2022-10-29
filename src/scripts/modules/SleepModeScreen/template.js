@@ -1,0 +1,1 @@
+export const template = () => (`<div class="sleep sleep__close"></div>`);

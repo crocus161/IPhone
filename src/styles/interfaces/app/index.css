@@ -1,5 +1,3 @@
-
-
 .phone  {
 	position: relative;
 	width: 440px;
@@ -17,7 +15,10 @@
 	width: 395px;
 	height: 849px;
 	border-radius: 40px;
-	background: red;
+	overflow: hidden;
+
+	/*Todo remove this line in future*/
+	background: var(--color-white);
 }
 
 .phone__icon {
@@ -42,16 +43,20 @@
 	display: block;
 	width: 3px;
 	height: 100%;
+	transition: 0.1s;
 	border-radius: 0 3px 3px 0;
 	background: linear-gradient(90deg, #DED7D6, #F3F0F0);
 }
-
 
 /* volume buttons */
 .phone__volume {
 	right: 439px;
 	padding-left: 40px;
 	height: 67px;
+}
+
+.phone__volume.active {
+	right: 437px;
 }
 
 .phone__volume .phone__button {
@@ -73,6 +78,10 @@
 	height: 106px;
 	top: 229px;
 	left: 439px;
+}
+
+.phone__power.active {
+	left: 437px;
 }
 
 
