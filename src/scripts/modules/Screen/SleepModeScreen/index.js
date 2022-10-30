@@ -1,6 +1,6 @@
-import Screen from '../Shared/Screen';
+import Screen from '../../Shared/Screen';
 import {template} from './template';
-import { getElement } from '../../utils/getElement';
+import { getElement } from '../../../utils/getElement';
 
 class SleepModeScreen extends Screen{
 	constructor() {

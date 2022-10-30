@@ -1,4 +1,4 @@
-import { getElement } from '../../utils/getElement';
+import { getElement } from '../../../utils/getElement';
 
 class PhoneButtonAnimations {
 	constructor() {
