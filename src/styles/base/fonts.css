@@ -1,0 +1,17 @@
+@font-face {
+	font-family: "SF Pro Display";
+	font-weight: 200;
+	src: url("../../fonts/SFProDisplay-Thin.eot"),
+		url("../../fonts/SFProDisplay-Thin.woff") format("woff"),
+		url("../../fonts/SFProDisplay-Thin.woff2") format("woff2"),
+		url('../../fonts/SFProDisplay-Thin.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: "SF Pro Display";
+	font-weight: 400;
+	src: url("../../fonts/SFProDisplay-Regular.eot"),
+		url("../../fonts/SFProDisplay-Regular.woff") format("woff"),
+		url("../../fonts/SFProDisplay-Regular.woff2") format("woff2"),
+		url('../../fonts/SFProDisplay-Regular.ttf') format('truetype');
+}

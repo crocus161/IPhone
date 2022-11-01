@@ -1,4 +1,5 @@
 /* ! APP BASEMENT*/
+@import url('./base/fonts.css');
 @import url('./base/variables.css');
 @import url('./base/normalize.css');
 @import url('./base/base.css');
@@ -8,5 +9,6 @@
 @import url('interfaces/modules/common/screen/index.css');
 @import url('interfaces/modules/powerOnScreen/index.css');
 @import url('interfaces/modules/sleepModeScreen/index.css');
+@import url('interfaces/modules/lockScreen/index.css');
 
 

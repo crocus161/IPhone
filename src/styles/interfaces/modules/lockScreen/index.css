@@ -1,0 +1,54 @@
+.lock {
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+	left: -1px;
+	right: -1px;
+	z-index: 999;
+}
+
+.lock__wallpaper {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+}
+
+.lock__wallpaper svg {
+	width: 100%;
+	height: 101%;
+}
+
+
+.lock__meta {
+	margin-top: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.lock__meta-icon,
+.lock__meta-icon svg{
+	width: 25px;
+	height: 35px;
+}
+
+.lock__meta-time {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	margin: 0 !important;
+}
+
+.lock__meta-time p {
+	font-weight: 200;
+	font-size: 83px;
+	line-height: 99px;
+	letter-spacing: -0.24px;
+	color: var(--color-white);
+}
+
+.lock__meta-dots {
+	margin-top: -10px;
+}
+

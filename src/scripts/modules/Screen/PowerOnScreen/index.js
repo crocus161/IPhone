@@ -1,4 +1,4 @@
-import {screen} from './template';
+import {template} from './template';
 import Screen from '../../Shared/Screen';
 import { getElement } from '../../../utils/getElement';
 import CustomEvent from '../../Shared/CustomEvent';
@@ -48,7 +48,7 @@ class PowerOnScreen extends Screen{
 	}
 
 	get template() {
-		return screen(this.isPowerOn);
+		return template(this.isPowerOn);
 	}
 }
 

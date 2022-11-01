@@ -3,6 +3,7 @@
 	height: 100%;
 	position: absolute;
 	inset: 0;
+	z-index: 9999999;
 }
 
 .sleep::after {
