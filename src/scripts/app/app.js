@@ -18,7 +18,7 @@ class App {
 		new PhoneButtonAnimations();
 		new PowerOnScreen(this.powerOnCallback);
 
-		// this.powerOnCallback();
+		this.powerOnCallback();
 	}
 
 	powerOnCallback() {

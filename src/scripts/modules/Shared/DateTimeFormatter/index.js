@@ -9,7 +9,11 @@ class DateTimeFormatter {
 		const daysList = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 		const monthList = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 
-		console.log(monthList[date.getMonth()], daysList[date.getDay()], date.getDate());
+		return  {
+			month: monthList[date.getMonth()],
+			date: date.getDate(),
+			day: daysList[date.getDay()]
+		}
 	}
 
 	static currentTime() {

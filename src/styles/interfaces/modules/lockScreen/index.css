@@ -5,6 +5,8 @@
 	left: -1px;
 	right: -1px;
 	z-index: 999;
+	display: flex;
+	flex-direction: column;
 }
 
 .lock__wallpaper {
@@ -50,5 +52,42 @@
 
 .lock__meta-dots {
 	margin-top: -10px;
+}
+
+.lock__meta-date {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 28px;
+	text-align: center;
+	letter-spacing: 0.35px;
+	color: var(--color-white);
+}
+
+.lock__notifications {
+	flex-grow: 1;
+}
+
+.lock__actions {
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 44px;
+}
+
+.lock__actions-icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	mix-blend-mode: normal;
+	backdrop-filter: blur(40px);
+	background: rgba(245, 245, 245, 0.15);
+	position: relative;
+}
+
+.lock__actions-icon svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 

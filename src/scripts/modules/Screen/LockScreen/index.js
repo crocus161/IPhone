@@ -9,12 +9,12 @@ class LockScreen extends Screen{
 		super();
 
 		this.setNewTime();
+		this.setFullFormatDate();
+
 		super.init();
-
 		this.timeElement = getElement('.lock__meta-time');
-		this.refreshTimeInLayout();
 
-		DateTimeFormatter.lockScreenFormatDate();
+		this.refreshTimeInLayout();
 	}
 
 	refreshTimeInLayout() {
@@ -28,8 +28,12 @@ class LockScreen extends Screen{
 		this.time = DateTimeFormatter.currentTime();
 	}
 
+	setFullFormatDate () {
+		this.date = DateTimeFormatter.lockScreenFormatDate();
+	}
+
 	get template() {
-		return template(this.time, '');
+		return template(this.time, this.date);
 	}
 }
 
