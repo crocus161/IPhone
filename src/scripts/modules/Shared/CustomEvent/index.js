@@ -6,7 +6,7 @@ class CustomEvent {
 			timeout = setTimeout(callback, time);
 		});
 
-		element.addEventListener('mouseup', () => {
+		window.addEventListener('mouseup', () => {
 			clearTimeout(timeout);
 		});
 	}

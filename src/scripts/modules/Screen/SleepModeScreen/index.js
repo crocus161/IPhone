@@ -9,6 +9,7 @@ class SleepModeScreen extends Screen{
 
 		this.init();
 		this.powerButton = getElement('.phone__power');
+		this.screen.addEventListener('click', this.toggleSleepModeOnStatus.bind(this));
 		this.powerButton.addEventListener('click', this.toggleSleepModeOnStatus.bind(this));
 	}
 

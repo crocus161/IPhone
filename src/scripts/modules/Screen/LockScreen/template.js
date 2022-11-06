@@ -18,8 +18,8 @@ export const template = (time, date) => (`
 		<div class="lock__notifications"></div>
 		
 		<div class="lock__actions">
-			<div class="lock__actions-icon">${flashlightIcon()}</div>
-			<div class="lock__actions-icon">${cameraIcon()}</div>
+			<button class="lock__flashlight lock__actions-icon">${flashlightIcon()}</button>
+			<button class="lock__camera lock__actions-icon">${cameraIcon()}</button>
 		</div>
 	</div>
 `);

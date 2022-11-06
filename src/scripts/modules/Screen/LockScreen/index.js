@@ -2,6 +2,7 @@ import { lockTime, template } from './template';
 import Screen from '../../Shared/Screen';
 import DateTimeFormatter from '../../Shared/DateTimeFormatter';
 import { getElement } from '../../../utils/getElement';
+import LockScreenActions from './modules/LockScreenActions';
 
 class LockScreen extends Screen{
 
@@ -15,6 +16,11 @@ class LockScreen extends Screen{
 		this.timeElement = getElement('.lock__meta-time');
 
 		this.refreshTimeInLayout();
+
+		new LockScreenActions(
+			getElement('.lock__flashlight'),
+			getElement('.lock__camera')
+		);
 	}
 
 	refreshTimeInLayout() {

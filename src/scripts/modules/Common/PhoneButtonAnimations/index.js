@@ -16,7 +16,7 @@ class PhoneButtonAnimations {
 			element.classList.add('active');
 		});
 
-		element.addEventListener('mouseup', () => {
+		window.addEventListener('mouseup', () => {
 			element.classList.remove('active');
 		});
 	}

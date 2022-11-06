@@ -84,5 +84,21 @@
 	left: 437px;
 }
 
+/* flashlight */
+.phone__flashlight {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	z-index: -1;
+
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+}
+
+.phone__flashlight.active {
+	box-shadow: -60px -60px 500px var(--color-white);
+}
+
 
 

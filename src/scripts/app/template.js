@@ -19,6 +19,8 @@ export const app = () => {
 			</button>
 			
 			<button class="phone__silent"></button>		
+			
+			<div class="phone__flashlight"></div>	
 		</div>
 	`);
 }

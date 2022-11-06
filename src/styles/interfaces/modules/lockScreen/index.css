@@ -80,8 +80,9 @@
 	border-radius: 50%;
 	mix-blend-mode: normal;
 	backdrop-filter: blur(40px);
-	background: rgba(245, 245, 245, 0.15);
+	background-color: rgba(245, 245, 245, 0.15);
 	position: relative;
+	transition: transform .3s cubic-bezier(.42,.97,.52,1.49), background-color .1s linear;
 }
 
 .lock__actions-icon svg {
@@ -89,5 +90,20 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	transition: all 0.1s linear;
 }
+
+.lock__actions-icon.mousedown{
+	transform: scale(1.4);
+	backdrop-filter: blur(20px);
+}
+
+.lock__actions-icon.active{
+	background: var(--color-white);
+}
+
+.lock__actions-icon.active path{
+	fill: var(--color-black);
+}
+
 
