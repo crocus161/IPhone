@@ -12,16 +12,12 @@ class LockScreenActions {
 		const animateAttr = 'data-animate';
 
 		button.addEventListener('mousedown', () => {
-			button.classList.add('mousedown');
-
 			timeout = setTimeout(() => {
 				button.setAttribute(animateAttr, 'true');
 			}, animationTime);
 		});
 
 		window.addEventListener('mouseup', () => {
-			button.classList.remove('mousedown');
-
 			clearTimeout(timeout);
 			if(!button.dataset.animate) return;
 

@@ -93,7 +93,7 @@
 	transition: all 0.1s linear;
 }
 
-.lock__actions-icon.mousedown{
+.lock__actions-icon:active {
 	transform: scale(1.4);
 	backdrop-filter: blur(20px);
 }

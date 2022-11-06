@@ -55,7 +55,7 @@
 	height: 67px;
 }
 
-.phone__volume.active {
+.phone__volume:active {
 	right: 437px;
 }
 
@@ -80,7 +80,7 @@
 	left: 439px;
 }
 
-.phone__power.active {
+.phone__power:active {
 	left: 437px;
 }
 

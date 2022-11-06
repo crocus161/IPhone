@@ -3,6 +3,7 @@ import Screen from '../../Shared/Screen';
 import DateTimeFormatter from '../../Shared/DateTimeFormatter';
 import { getElement } from '../../../utils/getElement';
 import LockScreenActions from './modules/LockScreenActions';
+import SwipeLine from '../../Shared/SwipeLine';
 
 class LockScreen extends Screen{
 
@@ -13,14 +14,17 @@ class LockScreen extends Screen{
 		this.setFullFormatDate();
 
 		super.init();
-		this.timeElement = getElement('.lock__meta-time');
+		this.lockScreen = getElement('.lock');
 
+		this.timeElement = getElement('.lock__meta-time');
 		this.refreshTimeInLayout();
 
 		new LockScreenActions(
 			getElement('.lock__flashlight'),
 			getElement('.lock__camera')
 		);
+
+		new SwipeLine(this.lockScreen);
 	}
 
 	refreshTimeInLayout() {

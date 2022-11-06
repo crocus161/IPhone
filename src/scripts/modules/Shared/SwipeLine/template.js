@@ -1,0 +1,1 @@
+export const template = () => (`<div class="swipe__line"></div>`);
