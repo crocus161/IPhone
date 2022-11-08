@@ -18,7 +18,7 @@
 	overflow: hidden;
 
 	/*Todo remove this line in future*/
-	background: var(--color-white);
+	background: var(--color-black);
 }
 
 .phone__icon {

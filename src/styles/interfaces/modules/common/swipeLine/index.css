@@ -6,9 +6,11 @@
 	padding: 15px 0 10px;
 	width: 155px;
 	cursor: pointer;
+	user-select: none;
 }
 
 .swipe__line::before {
+	user-select: none;
 	content: '';
 	position: absolute;
 	top: 50%;

@@ -3,47 +3,43 @@ import Screen from '../../Shared/Screen';
 import DateTimeFormatter from '../../Shared/DateTimeFormatter';
 import { getElement } from '../../../utils/getElement';
 import LockScreenActions from './modules/LockScreenActions';
-import SwipeLine from '../../Shared/SwipeLine';
+import LockScreenSwipe from './modules/LockScreenSwipe';
 
 class LockScreen extends Screen{
 
 	constructor() {
 		super();
-
-		this.setNewTime();
-		this.setFullFormatDate();
-
-		super.init();
-		this.lockScreen = getElement('.lock');
-
-		this.timeElement = getElement('.lock__meta-time');
-		this.refreshTimeInLayout();
+		this.init();
 
 		new LockScreenActions(
 			getElement('.lock__flashlight'),
 			getElement('.lock__camera')
 		);
 
-		new SwipeLine(this.lockScreen);
+		new LockScreenSwipe(this.root, this.lockScreen);
+	}
+
+	init() {
+		super.init();
+
+		this.lockScreen = getElement('.lock');
+		this.timeElement = getElement('.lock__meta-time');
+
+		this.refreshTimeInLayout();
 	}
 
 	refreshTimeInLayout() {
 		setInterval(() => {
-			this.setNewTime();
-			this.timeElement.innerHTML = lockTime(this.time);
+			const newTime = DateTimeFormatter.currentTime();
+			this.timeElement.innerHTML = lockTime(newTime);
 		}, 60000);
 	}
 
-	setNewTime() {
-		this.time = DateTimeFormatter.currentTime();
-	}
-
-	setFullFormatDate () {
-		this.date = DateTimeFormatter.lockScreenFormatDate();
-	}
-
 	get template() {
-		return template(this.time, this.date);
+		return template(
+			DateTimeFormatter.currentTime(),
+			DateTimeFormatter.lockScreenFormatDate()
+		);
 	}
 }
 

@@ -9,9 +9,17 @@
   font-family: 'SF Pro Display';
 }
 
+body {
+  height: 100vh;
+  user-select: none;
+  overflow-y: hidden;
+}
+
 button {
   all: unset;
   cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #root {

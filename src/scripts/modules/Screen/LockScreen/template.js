@@ -5,7 +5,10 @@ import { cameraIcon } from '../../../icons/camera';
 
 export const template = (time, date) => (`
 	<div class="lock">
-		<div class="lock__wallpaper">${mockWallpaper()}</div>
+		<div class="lock__wallpaper">
+			${mockWallpaper()}
+			<div class="lock__wallpaper-backdrop"></div>	
+		</div>
 
 		<div class="lock__meta">
 			<div class="lock__meta-icon">${lockIcon()}</div>
