@@ -41,6 +41,12 @@ class LockScreen extends Screen{
 			DateTimeFormatter.lockScreenFormatDate()
 		);
 	}
+
+	static toggleLockScreen() {
+		setTimeout(() => {
+			getElement('.lock').style.bottom = '-1px';
+		}, 350);
+	}
 }
 
 export default LockScreen;

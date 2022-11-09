@@ -10,6 +10,7 @@ class LockScreenSwipe {
 	}
 
 	swipeStart(event) {
+		console.log(event);
 		return event.srcElement.classList.contains('swipe__line');
 	}
 
@@ -19,12 +20,14 @@ class LockScreenSwipe {
 	}
 
 	swipeEnd(_, animationProgress) {
+		console.log(animationProgress);
+
 		if(animationProgress > 45) {
 			this.lockScreen.classList.add('open');
 			this.lockScreen.style.bottom = '105%';
 		} else {
 			this.lockScreen.classList.add('open');
-			this.lockScreen.style.bottom = '0%';
+			this.lockScreen.style.bottom = '-1px';
 		}
 
 		setTimeout(() => {

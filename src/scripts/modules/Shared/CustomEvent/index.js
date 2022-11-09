@@ -35,6 +35,9 @@ class CustomEvent {
 		root.addEventListener('pointerup', () => {
 			endCallback(pixelProgress, animationProgress);
 			isSwipeAllowed = false;
+
+			animationProgress = 0;
+			pixelProgress = 0;
 		});
 	}
 }

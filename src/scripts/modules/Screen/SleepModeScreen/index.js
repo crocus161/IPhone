@@ -1,6 +1,7 @@
 import Screen from '../../Shared/Screen';
 import {template} from './template';
 import { getElement } from '../../../utils/getElement';
+import LockScreen from '../LockScreen';
 
 class SleepModeScreen extends Screen{
 	constructor() {
@@ -18,11 +19,15 @@ class SleepModeScreen extends Screen{
 		this.screen = getElement('.sleep');
 	}
 
+	destroy() {
+
+	}
+
 	toggleSleepModeOnStatus() {
 		this.isSleepModeOn = !this.isSleepModeOn;
 		this.screen.classList[this.isSleepModeOn ? 'remove' : 'add']('sleep__close');
+		if(this.screen) LockScreen.toggleLockScreen();
 	}
-
 
 	get template() {
 		return template();

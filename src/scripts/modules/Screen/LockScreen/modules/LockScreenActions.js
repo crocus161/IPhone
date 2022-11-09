@@ -12,6 +12,7 @@ class LockScreenActions {
 		const animateAttr = 'data-animate';
 
 		button.addEventListener('mousedown', () => {
+			console.log('down');
 			timeout = setTimeout(() => {
 				button.setAttribute(animateAttr, 'true');
 			}, animationTime);

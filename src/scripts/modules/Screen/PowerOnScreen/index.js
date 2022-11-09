@@ -7,7 +7,6 @@ class PowerOnScreen extends Screen{
 
 	constructor(powerOnCallback) {
 		super();
-		this.powerOff();
 		this.powerOnCallback = powerOnCallback;
 
 		this.timeout = 4000;
@@ -33,6 +32,7 @@ class PowerOnScreen extends Screen{
 	powerOff() {
 		this.root.innerHTML = '';
 		this.isPowerOn = false;
+		window.location.reload();
 	}
 
 	init() {
