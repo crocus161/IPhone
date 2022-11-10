@@ -3,15 +3,18 @@
 	bottom: -1px;
 	left: -2px;
 	right: 0;
-	width: 101%;
+	min-width: 101%;
 	height: 101%;
 	z-index: 999;
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 	/*transition: 0.01s;*/
 }
 
-.lock.open {
+.lock.open,
+.lock.open .lock__wallpaper,
+.lock.open .lock__wallpaper-backdrop{
 	transition: 0.3s;
 }
 
@@ -24,6 +27,12 @@
 .lock__wallpaper svg {
 	width: 100%;
 	height: 100%;
+}
+
+.lock__wallpaper-backdrop {
+	position: absolute;
+	inset: 0;
+	background: rgba(255,255,255, 0);
 }
 
 

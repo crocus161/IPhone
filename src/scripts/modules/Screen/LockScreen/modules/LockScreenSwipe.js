@@ -1,12 +1,21 @@
 import SwipeLine from '../../../Shared/SwipeLine';
 import CustomEvent from '../../../Shared/CustomEvent';
+import { getElement } from '../../../../utils/getElement';
 
 class LockScreenSwipe {
 	constructor(root, lockScreen) {
 		this.lockScreen = lockScreen;
+		this.lockScreenWallpaper = getElement('.lock__wallpaper');
+		this.lockScreenBackdrop = getElement('.lock__wallpaper-backdrop');
 
 		new SwipeLine(this.lockScreen);
 		CustomEvent.swipeUp(root, this.swipeStart.bind(this), this.swipeMove.bind(this), this.swipeEnd.bind(this));
+	}
+
+	setAnimationValues(pixelProgress, percentageProgress) {
+		this.lockScreen.style.bottom = `${pixelProgress}px`;
+		this.lockScreenBackdrop.style.backdropFilter = `blur(${percentageProgress / 2}px)`;
+		this.lockScreenWallpaper.style.transform = `translateY(${percentageProgress * 2}px)`;
 	}
 
 	swipeStart(event) {
@@ -14,21 +23,17 @@ class LockScreenSwipe {
 		return event.srcElement.classList.contains('swipe__line');
 	}
 
-	swipeMove(pixelProgress, animationProgress) {
-		if(animationProgress > 100 || animationProgress < 0) return;
-		this.lockScreen.style.bottom = `${pixelProgress}px`;
+	swipeMove(pixelProgress, percentageProgress) {
+		if(percentageProgress > 100 || percentageProgress < 0) return;
+		this.setAnimationValues(pixelProgress, percentageProgress);
 	}
 
-	swipeEnd(_, animationProgress) {
-		console.log(animationProgress);
+	swipeEnd(_, percentageProgress) {
+		this.lockScreen.classList.add('open');
 
-		if(animationProgress > 45) {
-			this.lockScreen.classList.add('open');
-			this.lockScreen.style.bottom = '105%';
-		} else {
-			this.lockScreen.classList.add('open');
-			this.lockScreen.style.bottom = '-1px';
-		}
+		percentageProgress > 45
+			? this.lockScreen.style.bottom = '105%'
+			: this.setAnimationValues(0, 0);
 
 		setTimeout(() => {
 			this.lockScreen.classList.remove('open');

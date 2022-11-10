@@ -1,4 +1,3 @@
-import { getElement } from '../../../utils/getElement';
 
 class CustomEvent {
 	static mousehold(element, callback, time) {
@@ -15,7 +14,7 @@ class CustomEvent {
 
 	static swipeUp(root, startCallback, moveCallback, endCallback ) {
 		let isSwipeAllowed = false;
-		let moveY, animationProgress, pixelProgress;
+		let moveY, percentageProgress, pixelProgress;
 		const {y, height} = root.getBoundingClientRect();
 
 		root.addEventListener('pointerdown', event => {
@@ -27,16 +26,16 @@ class CustomEvent {
 			moveY = (event.clientY - y) / height * root.offsetHeight;
 
 			const pixelProgress = height - moveY;
-			animationProgress = (pixelProgress / (height / 100)).toFixed(10);
+			percentageProgress = (pixelProgress / (height / 100)).toFixed(10);
 
-			moveCallback(pixelProgress, animationProgress);
+			moveCallback(pixelProgress, percentageProgress);
 		});
 
 		root.addEventListener('pointerup', () => {
-			endCallback(pixelProgress, animationProgress);
+			endCallback(pixelProgress, percentageProgress);
 			isSwipeAllowed = false;
 
-			animationProgress = 0;
+			percentageProgress = 0;
 			pixelProgress = 0;
 		});
 	}

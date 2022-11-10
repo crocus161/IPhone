@@ -44,7 +44,9 @@ class LockScreen extends Screen{
 
 	static toggleLockScreen() {
 		setTimeout(() => {
-			getElement('.lock').style.bottom = '-1px';
+			getElement('.lock').removeAttribute('style');
+			getElement('.lock__wallpaper').removeAttribute('style');
+			getElement('.lock__wallpaper-backdrop').removeAttribute('style');
 		}, 350);
 	}
 }
