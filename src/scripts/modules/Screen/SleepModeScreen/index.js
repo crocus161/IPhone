@@ -19,10 +19,6 @@ class SleepModeScreen extends Screen{
 		this.screen = getElement('.sleep');
 	}
 
-	destroy() {
-
-	}
-
 	toggleSleepModeOnStatus() {
 		this.isSleepModeOn = !this.isSleepModeOn;
 		this.screen.classList[this.isSleepModeOn ? 'remove' : 'add']('sleep__close');

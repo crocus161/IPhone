@@ -16,7 +16,7 @@ class App {
 
 		new PowerOnScreen(this.powerOnCallback);
 
-		// this.powerOnCallback();
+		this.powerOnCallback();
 	}
 
 	powerOnCallback() {

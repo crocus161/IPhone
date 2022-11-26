@@ -19,7 +19,6 @@ class LockScreenSwipe {
 	}
 
 	swipeStart(event) {
-		console.log(event);
 		return event.srcElement.classList.contains('swipe__line');
 	}
 
