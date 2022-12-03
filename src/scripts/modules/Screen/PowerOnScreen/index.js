@@ -12,7 +12,6 @@ class PowerOnScreen extends Screen{
 		this.timeout = 4000;
 		this.closeAnimationTime = 550;
 
-		this.powerButton = getElement('.phone__power');
 		CustomEvent.mousehold(this.powerButton, this.powerButtonHandler.bind(this), this.timeout);
 	}
 

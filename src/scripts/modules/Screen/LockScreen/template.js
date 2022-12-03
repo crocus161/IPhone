@@ -1,4 +1,4 @@
-import { mockWallpaper } from './mock-wallpaper';
+import { mockWallpaper } from '../../../icons/mock-wallpaper';
 import { lockIcon } from '../../../icons/lock';
 import { flashlightIcon } from '../../../icons/flashlight';
 import { cameraIcon } from '../../../icons/camera';

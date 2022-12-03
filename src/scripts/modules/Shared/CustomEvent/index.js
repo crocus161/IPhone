@@ -12,7 +12,7 @@ class CustomEvent {
 		});
 	}
 
-	static swipeUp(root, startCallback, moveCallback, endCallback ) {
+	static verticalSwipe(root, startCallback, moveCallback, endCallback ) {
 		let isSwipeAllowed = false;
 		let moveY, percentageProgress, pixelProgress;
 		const {y, height} = root.getBoundingClientRect();
@@ -32,11 +32,15 @@ class CustomEvent {
 		});
 
 		root.addEventListener('pointerup', () => {
-			endCallback(pixelProgress, percentageProgress);
-			isSwipeAllowed = false;
 
-			percentageProgress = 0;
-			pixelProgress = 0;
+			if(isSwipeAllowed) {
+				endCallback(pixelProgress, percentageProgress);
+
+				percentageProgress = 0;
+				pixelProgress = 0;
+			}
+
+			isSwipeAllowed = false;
 		});
 	}
 }

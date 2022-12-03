@@ -1,28 +1,32 @@
-import Screen from '../../Shared/Screen';
 import {template} from './template';
+import Screen from '../../Shared/Screen';
+import SleepModeScreenStore from './store';
 import { getElement } from '../../../utils/getElement';
-import LockScreen from '../LockScreen';
+import LockScreenStore from '../LockScreen/store';
 
 class SleepModeScreen extends Screen{
 	constructor() {
 		super();
-		this.isSleepModeOn = false;
+		this.screen = null;
 
 		this.init();
-		this.powerButton = getElement('.phone__power');
-		this.screen.addEventListener('click', this.toggleSleepModeOnStatus.bind(this));
-		this.powerButton.addEventListener('click', this.toggleSleepModeOnStatus.bind(this));
+		this.screen.addEventListener('click', SleepModeScreenStore.toggleOnStatus);
+		this.powerButton.addEventListener('click', SleepModeScreenStore.toggleOnStatus);
+
+		SleepModeScreenStore.subscribe(this.observerCallback.bind(this));
+	}
+
+	observerCallback(state) {
+		this.screen.classList[state.isModeOn ? 'remove' : 'add']('sleep__close');
+
+		setTimeout(() => {
+			if(state.isModeOn) LockScreenStore.changeShownStatus(true);
+		}, 350);
 	}
 
 	init() {
 		super.init();
 		this.screen = getElement('.sleep');
-	}
-
-	toggleSleepModeOnStatus() {
-		this.isSleepModeOn = !this.isSleepModeOn;
-		this.screen.classList[this.isSleepModeOn ? 'remove' : 'add']('sleep__close');
-		if(this.screen) LockScreen.toggleLockScreen();
 	}
 
 	get template() {

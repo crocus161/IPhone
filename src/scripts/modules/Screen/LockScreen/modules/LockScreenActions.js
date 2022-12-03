@@ -1,9 +1,12 @@
 import { getElement } from '../../../../utils/getElement';
 
 class LockScreenActions {
-	constructor(flashlightButton, cameraButton) {
-		this.actionAnimation(cameraButton);
-		this.actionAnimation(flashlightButton, this.toggleFlashlight.bind(this));
+	constructor() {
+		this.cameraButton = getElement('.lock__camera');
+		this.flashlightButton = getElement('.lock__flashlight');
+
+		this.actionAnimation(this.cameraButton);
+		this.actionAnimation(this.flashlightButton, this.toggleFlashlight.bind(this));
 	}
 
 	actionAnimation(button, onActiveCallback) {
@@ -12,7 +15,6 @@ class LockScreenActions {
 		const animateAttr = 'data-animate';
 
 		button.addEventListener('mousedown', () => {
-			console.log('down');
 			timeout = setTimeout(() => {
 				button.setAttribute(animateAttr, 'true');
 			}, animationTime);

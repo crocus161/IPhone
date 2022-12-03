@@ -1,6 +1,7 @@
 import SwipeLine from '../../../Shared/SwipeLine';
 import CustomEvent from '../../../Shared/CustomEvent';
 import { getElement } from '../../../../utils/getElement';
+import LockScreenStore from '../store';
 
 class LockScreenSwipe {
 	constructor(root, lockScreen) {
@@ -9,7 +10,13 @@ class LockScreenSwipe {
 		this.lockScreenBackdrop = getElement('.lock__wallpaper-backdrop');
 
 		new SwipeLine(this.lockScreen);
-		CustomEvent.swipeUp(root, this.swipeStart.bind(this), this.swipeMove.bind(this), this.swipeEnd.bind(this));
+		CustomEvent.verticalSwipe(root, this.swipeStart.bind(this), this.swipeMove.bind(this), this.swipeEnd.bind(this));
+
+		LockScreenStore.subscribe(this.observerCallback.bind(this));
+	}
+
+	observerCallback(state) {
+		state.isShown ? this.show() : this.hide();
 	}
 
 	setAnimationValues(pixelProgress, percentageProgress) {
@@ -28,17 +35,25 @@ class LockScreenSwipe {
 	}
 
 	swipeEnd(_, percentageProgress) {
+		const MIN_PROGRESS_TO_HIDE = 45;
 		this.lockScreen.classList.add('open');
 
-		percentageProgress > 45
-			? this.lockScreen.style.bottom = '105%'
-			: this.setAnimationValues(0, 0);
+		percentageProgress > MIN_PROGRESS_TO_HIDE
+			? LockScreenStore.changeShownStatus(false)
+			: this.show();
 
 		setTimeout(() => {
 			this.lockScreen.classList.remove('open');
 		}, 310);
 	}
 
+	hide() {
+		this.lockScreen.style.bottom = '105%'
+	}
+
+	show() {
+		this.setAnimationValues(0, 0);
+	}
 }
 
 export default LockScreenSwipe;

@@ -4,6 +4,7 @@ class Screen {
 
 	constructor() {
 		this.root = getElement('#screen');
+		this.powerButton = getElement('.phone__power');
 	}
 
 	init() {

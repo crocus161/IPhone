@@ -6,16 +6,11 @@ import LockScreenActions from './modules/LockScreenActions';
 import LockScreenSwipe from './modules/LockScreenSwipe';
 
 class LockScreen extends Screen{
-
 	constructor() {
 		super();
 		this.init();
 
-		new LockScreenActions(
-			getElement('.lock__flashlight'),
-			getElement('.lock__camera')
-		);
-
+		new LockScreenActions();
 		new LockScreenSwipe(this.root, this.lockScreen);
 	}
 
@@ -40,14 +35,6 @@ class LockScreen extends Screen{
 			DateTimeFormatter.currentTime(),
 			DateTimeFormatter.lockScreenFormatDate()
 		);
-	}
-
-	static toggleLockScreen() {
-		setTimeout(() => {
-			getElement('.lock').removeAttribute('style');
-			getElement('.lock__wallpaper').removeAttribute('style');
-			getElement('.lock__wallpaper-backdrop').removeAttribute('style');
-		}, 350);
 	}
 }
 

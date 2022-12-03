@@ -7,16 +7,12 @@ import LockScreen from '../modules/Screen/LockScreen';
 class App {
 	constructor(startElementSelector) {
 		this.root = getElement(startElementSelector);
-
 		this.init();
 	}
 
 	init() {
 		this.root.insertAdjacentHTML('afterbegin', this.template);
-
 		new PowerOnScreen(this.powerOnCallback);
-
-		this.powerOnCallback();
 	}
 
 	powerOnCallback() {
