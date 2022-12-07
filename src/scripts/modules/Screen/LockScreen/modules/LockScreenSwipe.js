@@ -21,7 +21,8 @@ class LockScreenSwipe {
 
 	setAnimationValues(pixelProgress, percentageProgress) {
 		this.lockScreen.style.bottom = `${pixelProgress}px`;
-		this.lockScreenBackdrop.style.backdropFilter = `blur(${percentageProgress / 2}px)`;
+		this.lockScreen.style.opacity = `${120 - percentageProgress}%`;
+		this.lockScreenBackdrop.style.backdropFilter = `blur(${percentageProgress / 3}px)`;
 		this.lockScreenWallpaper.style.transform = `translateY(${percentageProgress * 2}px)`;
 	}
 

@@ -3,13 +3,19 @@ import SuperStore from '../../../Shared/Store';
 class Store extends SuperStore {
 	constructor() {
 		super();
-		this.state = { isShown: true };
+		this.state = {
+			isShown: true,
+			isToggleFirstTime: true
+		};
 
 		this.changeShownStatus = this.changeShownStatus.bind(this);
 	}
 
 	changeShownStatus(status) {
-		this.state.isShown = status;
+		this.state = {
+			isShown: status,
+			isToggleFirstTime: false
+		};
 		this.observer();
 	}
 
