@@ -13,8 +13,6 @@ class App {
 	init() {
 		this.root.insertAdjacentHTML('afterbegin', this.template);
 		new PowerOnScreen(this.powerOnCallback);
-
-		this.powerOnCallback();
 	}
 
 	powerOnCallback() {
