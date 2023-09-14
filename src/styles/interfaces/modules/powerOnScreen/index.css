@@ -37,7 +37,7 @@
 	opacity: 0;
 }
 
-.power__on-icon svg {
+.power__on-icon > svg {
 	width: 100px;
 	height: 100px;
 	fill: var(--color-white);

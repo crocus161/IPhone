@@ -6,8 +6,13 @@ import LockScreenStore from '../store';
 class LockScreenSwipe {
 	constructor(root, lockScreen) {
 		this.lockScreen = lockScreen;
-		this.lockScreenWallpaper = getElement('.lock__wallpaper');
+		this.lockScreenWallpaper = getElement('.lock__wallpaper svg');
 		this.lockScreenBackdrop = getElement('.lock__wallpaper-backdrop');
+
+		this.percentageToHide = 35;
+		this.percantageToShow = 75;
+
+		this.percentageToAction = this.percentageToHide;
 
 		new SwipeLine(this.lockScreen);
 		CustomEvent.verticalSwipe(root, this.swipeStart.bind(this), this.swipeMove.bind(this), this.swipeEnd.bind(this));
@@ -27,19 +32,18 @@ class LockScreenSwipe {
 	}
 
 	swipeStart(event) {
-		return event.srcElement.classList.contains('swipe__line');
+		return event.srcElement.classList.contains('swipe__line') || event.srcElement.classList.contains('lock__bottom');
 	}
 
 	swipeMove(pixelProgress, percentageProgress) {
-		if(percentageProgress > 100 || percentageProgress < 0) return;
+		if (percentageProgress > 100 || percentageProgress < 0) return;
 		this.setAnimationValues(pixelProgress, percentageProgress);
 	}
 
 	swipeEnd(_, percentageProgress) {
-		const MIN_PROGRESS_TO_HIDE = 45;
 		this.lockScreen.classList.add('open');
 
-		percentageProgress > MIN_PROGRESS_TO_HIDE
+		percentageProgress > this.percentageToAction
 			? LockScreenStore.changeShownStatus(false)
 			: this.show();
 
@@ -49,11 +53,13 @@ class LockScreenSwipe {
 	}
 
 	hide() {
-		this.lockScreen.style.bottom = '105%'
+		this.lockScreen.style.bottom = '100%';
+		this.percentageToAction = this.percantageToShow;
 	}
 
 	show() {
 		this.setAnimationValues(0, 0);
+		this.percentageToAction = this.percentageToHide;
 	}
 }
 

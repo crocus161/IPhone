@@ -21,6 +21,12 @@
 	background: var(--color-black);
 }
 
+.phone__screen h1 {
+	color: red;
+	text-align: center;
+	font-size: 60px;
+}
+
 .phone__icon {
 	position: relative;
 }

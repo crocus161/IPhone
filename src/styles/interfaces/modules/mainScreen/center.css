@@ -1,0 +1,22 @@
+.main__center {
+  display: flex;
+  flex-direction: column;
+  /*background: black;*/
+}
+
+.main__center h1 {
+  color: red;
+  text-align: center;
+  font-size: 60px;
+}
+
+.main__center-navbar {
+  display: flex;
+  justify-content: space-between;
+
+  margin: auto 12px 12px;
+  padding: 16px 18px;
+  border-radius: 30px;
+  backdrop-filter: blur(40px);
+  background: rgba(245, 245, 245, 0.5);
+}

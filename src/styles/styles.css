@@ -11,5 +11,7 @@
 @import url('interfaces/modules/powerOnScreen/index.css');
 @import url('interfaces/modules/sleepModeScreen/index.css');
 @import url('interfaces/modules/lockScreen/index.css');
+@import url('interfaces/modules/mainScreen/center.css');
+@import url('interfaces/modules/mainScreen/index.css');
 
 

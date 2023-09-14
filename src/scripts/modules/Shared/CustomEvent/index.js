@@ -12,7 +12,7 @@ class CustomEvent {
 		});
 	}
 
-	static verticalSwipe(root, startCallback, moveCallback, endCallback ) {
+	static verticalSwipe(root, startCallback, moveCallback, endCallback) {
 		let isSwipeAllowed = false;
 		let moveY, percentageProgress, pixelProgress;
 		const {y, height} = root.getBoundingClientRect();

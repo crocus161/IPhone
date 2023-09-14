@@ -11,6 +11,7 @@
 
 body {
   height: 100vh;
+  background: #222;
   user-select: none;
   overflow-y: hidden;
 }
@@ -28,6 +29,4 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  /*background: var(--root-background);*/
-  background: #222;
 }
