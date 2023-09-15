@@ -1,15 +1,15 @@
 class SuperStore {
 	constructor() {
 		this.state = {};
-		this.observersList = [];
+		this.observers = [];
 	}
 
 	subscribe(callback) {
-		this.observersList.push(callback);
+		this.observers.push(callback);
 	}
 
-	observer() {
-		this.observersList.forEach(callback => callback(this.state));
+	notify() {
+		this.observers.forEach(callback => callback(this.state));
 	}
 }
 

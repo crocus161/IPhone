@@ -10,7 +10,7 @@ class Store extends SuperStore {
 
 	toggleOnStatus() {
 		this.state.isModeOn = !this.state.isModeOn;
-		this.observer();
+		this.notify();
 	}
 
 }

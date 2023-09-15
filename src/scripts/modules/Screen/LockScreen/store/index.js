@@ -16,7 +16,7 @@ class Store extends SuperStore {
 			isShown: status,
 			isToggleFirstTime: false
 		};
-		this.observer();
+		this.notify();
 	}
 
 }
