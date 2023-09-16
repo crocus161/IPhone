@@ -5,6 +5,10 @@ class SuperStore {
 	}
 
 	subscribe(callback) {
+		if (typeof callback !== 'function') {
+			throw new Error('Callback must be a function');
+		}
+
 		this.observers.push(callback);
 	}
 
