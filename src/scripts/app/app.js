@@ -1,9 +1,9 @@
 import { app } from './template';
 import { getElement } from '../utils/getElement';
-import PowerOnScreen from '../modules/Screen/PowerOnScreen';
-import SleepModeScreen from '../modules/Screen/SleepModeScreen';
-import LockScreen from '../modules/Screen/LockScreen';
-import MainScreen from '../modules/Screen/MainScreen';
+import PowerOnScreen from '../modules/PowerOnScreen';
+import SleepModeScreen from '../modules/SleepModeScreen';
+import LockScreen from '../modules/LockScreen';
+import MainScreen from '../modules/MainScreen';
 
 class App {
 	constructor(startElementSelector) {

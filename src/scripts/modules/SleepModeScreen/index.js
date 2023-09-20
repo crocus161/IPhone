@@ -1,7 +1,7 @@
 import {template} from './template';
 import Screen from '../../Shared/Screen';
 import SleepModeScreenStore from './store';
-import { getElement } from '../../../utils/getElement';
+import { getElement } from '../../utils/getElement';
 import LockScreenStore from '../LockScreen/store';
 
 class SleepModeScreen extends Screen{

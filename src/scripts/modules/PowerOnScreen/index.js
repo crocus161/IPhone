@@ -1,6 +1,6 @@
 import {template} from './template';
 import Screen from '../../Shared/Screen';
-import { getElement } from '../../../utils/getElement';
+import { getElement } from '../../utils/getElement';
 import CustomEvent from '../../Shared/CustomEvent';
 
 class PowerOnScreen extends Screen{

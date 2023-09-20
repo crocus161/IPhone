@@ -1,5 +1,5 @@
-import { apple } from '../../../app/icons/apple';
-import { COLORS } from '../../../constants/colors';
+import { apple } from '../../app/icons/apple';
+import { COLORS } from '../../constants/colors';
 
 export const template = (isPowerOn) => (`
 	<div class="power__on">

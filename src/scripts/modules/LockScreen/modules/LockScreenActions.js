@@ -1,4 +1,5 @@
-import { getElement } from '../../../../utils/getElement';
+import { getElement } from '../../../utils/getElement';
+import { flashlightIcon } from '../../../icons/flashlight';
 
 class LockScreenActions {
 	constructor() {
@@ -35,6 +36,8 @@ class LockScreenActions {
 	toggleFlashlight(status) {
 		const phoneFlashlight = getElement('.phone__flashlight');
 		phoneFlashlight.classList[status ? 'add' : 'remove']('active');
+
+		this.flashlightButton.innerHTML = flashlightIcon(status);
 	}
 }
 

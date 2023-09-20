@@ -1,4 +1,4 @@
-import { mockAppIcon } from '../../../../../icons/mock-app';
+import { mockAppIcon } from '../../../../icons/mock-app';
 
 export const template = () => (`
 	<div class="main__center screen">

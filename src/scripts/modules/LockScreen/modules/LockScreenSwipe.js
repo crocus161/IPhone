@@ -1,6 +1,6 @@
 import SwipeLine from '../../../Shared/SwipeLine';
 import CustomEvent from '../../../Shared/CustomEvent';
-import { getElement } from '../../../../utils/getElement';
+import { getElement } from '../../../utils/getElement';
 import LockScreenStore from '../store';
 
 class LockScreenSwipe {

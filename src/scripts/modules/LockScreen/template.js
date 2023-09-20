@@ -1,7 +1,7 @@
-import { mockWallpaper } from '../../../icons/mock-wallpaper';
-import { lockIcon } from '../../../icons/lock';
-import { flashlightIcon } from '../../../icons/flashlight';
-import { cameraIcon } from '../../../icons/camera';
+import { mockWallpaper } from '../../icons/mock-wallpaper';
+import { lockIcon } from '../../icons/lock';
+import { flashlightIcon } from '../../icons/flashlight';
+import { cameraIcon } from '../../icons/camera';
 
 export const template = (time, date) => (`
 	<div class="lock">
@@ -21,7 +21,7 @@ export const template = (time, date) => (`
 		<div class="lock__notifications"></div>
 		
 		<div class="lock__actions">
-			<button class="lock__flashlight lock__actions-icon">${flashlightIcon()}</button>
+			<button class="lock__flashlight lock__actions-icon">${flashlightIcon(false)}</button>
 			<button class="lock__camera lock__actions-icon">${cameraIcon()}</button>
 		</div>
 		

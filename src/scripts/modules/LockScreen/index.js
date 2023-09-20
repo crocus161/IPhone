@@ -1,7 +1,7 @@
 import { lockTime, template } from './template';
 import Screen from '../../Shared/Screen';
 import DateTimeFormatter from '../../Shared/DateTimeFormatter';
-import { getElement } from '../../../utils/getElement';
+import { getElement } from '../../utils/getElement';
 import LockScreenActions from './modules/LockScreenActions';
 import LockScreenSwipe from './modules/LockScreenSwipe';
 

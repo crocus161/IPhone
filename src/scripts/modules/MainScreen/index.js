@@ -1,6 +1,6 @@
 import Screen from '../../Shared/Screen';
 import { template } from './template';
-import { getElement } from '../../../utils/getElement';
+import { getElement } from '../../utils/getElement';
 import MainScreenCenter from './modules/MainScreenCenter';
 
 class MainScreen extends Screen {
