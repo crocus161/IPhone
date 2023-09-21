@@ -1,5 +1,7 @@
 import Screen from '../../../../Shared/Screen';
 import { template } from './template';
+import { getElement } from '../../../../utils/getElement';
+import ApplicationsStorage from '../../../../applications';
 
 class MainScreenCenter extends Screen {
 	constructor(screen) {
@@ -11,6 +13,7 @@ class MainScreenCenter extends Screen {
 
 	init() {
 		this.screen.insertAdjacentHTML('afterbegin', this.template);
+		ApplicationsStorage.insertAll(getElement('#mainApps'));
 	}
 
 	get template() {

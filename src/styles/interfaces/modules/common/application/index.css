@@ -1,0 +1,20 @@
+.application {
+	width: 60px;
+	height: 80px;
+	display: flex;
+	flex-direction: column;
+}
+
+.application__icon {
+	width: 60px;
+	height: 60px;
+}
+
+.application__name {
+	margin-top: auto;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 16px;
+	color: var(--color-white);
+}

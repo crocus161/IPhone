@@ -2,7 +2,7 @@ import { mockAppIcon } from '../../../../icons/mock-app';
 
 export const template = () => (`
 	<div class="main__center screen">
-		<div class="main__center-slider">
+		<div id="mainApps" class="main__center-slider">
 			<h1>Hello world</h1>
 		</div>
 		

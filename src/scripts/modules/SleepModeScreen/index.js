@@ -1,10 +1,10 @@
-import {template} from './template';
+import { template } from './template';
 import Screen from '../../Shared/Screen';
 import SleepModeScreenStore from './store';
 import { getElement } from '../../utils/getElement';
 import LockScreenStore from '../LockScreen/store';
 
-class SleepModeScreen extends Screen{
+class SleepModeScreen extends Screen {
 	constructor() {
 		super();
 		this.screen = null;
@@ -20,7 +20,7 @@ class SleepModeScreen extends Screen{
 		this.screen.classList[state.isModeOn ? 'remove' : 'add']('sleep__close');
 
 		setTimeout(() => {
-			if(state.isModeOn) LockScreenStore.changeShownStatus(true);
+			if (state.isModeOn) LockScreenStore.changeShownStatus(true);
 		}, 350);
 	}
 
