@@ -1,13 +1,13 @@
 .main__center {
   display: flex;
   flex-direction: column;
-  /*background: black;*/
 }
 
-.main__center h1 {
-  color: red;
-  text-align: center;
-  font-size: 60px;
+.main__center-slider {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  padding: var(--top-gap) 32px 32px;
 }
 
 .main__center-navbar {

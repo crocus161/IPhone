@@ -19,8 +19,8 @@ class App {
 	}
 
 	powerOnCallback() {
-		// new SleepModeScreen();
-		// new LockScreen();
+		new SleepModeScreen();
+		new LockScreen();
 		new MainScreen();
 	}
 

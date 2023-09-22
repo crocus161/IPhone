@@ -5,8 +5,12 @@
 	transform: translateX(-50%);
 	padding: 15px 0 10px;
 	width: 155px;
-	cursor: pointer;
+	cursor: grab;
 	user-select: none;
+}
+
+.swipe__line:active {
+	cursor: grabbing;
 }
 
 .swipe__line::before {

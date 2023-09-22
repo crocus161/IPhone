@@ -1,8 +1,28 @@
 import TodoApp from './Todo';
 
-class ApplicationsStorage {
+class ApplicationsManager {
 	constructor() {
 		this.applications = [
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
+			TodoApp,
 			TodoApp,
 			TodoApp,
 			TodoApp,
@@ -20,4 +40,4 @@ class ApplicationsStorage {
 	}
 }
 
-export default new ApplicationsStorage();
+export default new ApplicationsManager();

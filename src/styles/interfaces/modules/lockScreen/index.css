@@ -125,7 +125,11 @@
 	top: 100%;
 	width: 80%;
 	height: 40px;
-	cursor: pointer;
+	cursor: grab;
+}
+
+.lock__bottom:active {
+	cursor: grabbing;
 }
 
 
