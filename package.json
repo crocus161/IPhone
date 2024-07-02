@@ -1,12 +1,12 @@
 {
   "name": "iphone",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fully native javascript IPhone with usage of OOP paradigms and solid",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html -p 3000 --open",
-    "build": "parcel build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build",
+    "start": "vite --open",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   "homepage": "https://github.com/willcode228/IPhone#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.3",
-    "parcel": "^2.9.3"
+    "vite": "^5.3.2"
   }
 }
